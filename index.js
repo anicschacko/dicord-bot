@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const config = require("config.json");
 const fs = require('fs'); 
 const { measureMemory } = require('vm');
 const prefix = '>';
@@ -29,4 +30,4 @@ client.on('message', message => {
 })
 
 
-client.login('NzcyMjA2Mjk1MTcxMzM0MTY0.X53TJw.YPhdfuoQXq5HkI2_erBUVcY6OlA'); 
+client.login(config.token); 
